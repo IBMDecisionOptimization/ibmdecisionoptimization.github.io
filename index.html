@@ -78,9 +78,11 @@
     <div class="container main">
 	  <!-- Sidebar -->
 		<div class="col-md-3 visible-md visible-lg docloud-sidebar">
-			<p>Welcome to Decision Optimization on Cloud (DOcloud) catalog on Github.</p>
-			<p>Soon you will have more samples available and the possibility to easily filter them.</p>
-			<p>Already looking for some type of samples? <a href="">Let us know</a></p>
+			<p>Welcome to the Decision Optimization on Cloud Catalog on GitHub. </p>
+			<p>Here you can find prewritten samples to help you 
+					quickly start your model or application. Check back 
+					regularly to see our growing list of samples. </p>
+			<p>Interested in a specific type of sample?  <a href="//developer.ibm.com/docloud/contact/" target="_blank">Let us know</a></p>
 		</div>
 		<!-- /.Sidebar --> 
 		<!-- Main --> 
@@ -102,7 +104,7 @@
           <div class="col-xs-12 col-sm-6 col-md-6 hidden-xs">
             <div class="docloud-search-input">
 							<div class="input-group">
-								<input type="text" ng-model="cardsNameContains" class="search-query form-control" placeholder="Search in catalog..." name="srch-term" id="srch-term">
+								<input type="text" ng-model="cardsNameContains" class="search-query form-control" placeholder="Search catalog..." name="srch-term" id="srch-term">
 								<div class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
 								</div>
@@ -201,7 +203,7 @@
                 	</a> <!-- /icon -->
                   <div class="well">
                       <div class="categories"><span class="category" ng-repeat="category in card.categories" ng-bind="category"></span></div>
-                      <div class="languages"><span class="language" ng-repeat="development in card.developments" ng-bind="development"></span></div>
+                      <div class="languages"><span class="language" ng-repeat="development in card.developments" ng-bind="development"></span><span class="language" ng-repeat="model in card.models" ng-bind="model"></span></div>
                   </div> <!-- /.well -->
                 </div>
               </div>
@@ -228,6 +230,9 @@
 							          Development 
 							        </th>
 							        <th>
+							          Model 
+							        </th>
+							        <th>
 							          Author 
 							        </th>
 							      </tr>
@@ -239,6 +244,7 @@
 							        <td>{{ card.description }}</td>
 							        <td><span class="category" ng-repeat="category in card.categories" ng-bind="category" ng-class="{'':'hidden'}[category]"></span></td>
 							        <td><span class="category" ng-repeat="development in card.developments" ng-bind="development" ng-class="{'':'hidden'}[development]"></span></td>
+							        <td><span class="category" ng-repeat="model in card.models" ng-bind="model" ng-class="{'':'hidden'}[model]"></span></td>
 							        <td>{{ card.author }}</td>
 							      </tr>
 							    </tbody>
