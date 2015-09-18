@@ -95,8 +95,8 @@ function($scope,cardsFactory,filtersFactory) { // definition of the controller
 			}
 			// languages
 			for (i = 0; i < filteredCards.length; i++) {
-				for (j = 0; j < filteredCards[i].languages.length; j++) {
-					if (searchnameRegExp.test(filteredCards[i].languages[j])) {
+				for (j = 0; j < filteredCards[i].developments.length; j++) {
+					if (searchnameRegExp.test(filteredCards[i].developments[j])) {
 						if ($.inArray(filteredCards[i], result) == -1) {
 			        result.push(filteredCards[i]);
 						}
