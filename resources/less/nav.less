@@ -1,0 +1,48 @@
+nav.navbar.navbar-inverse.navbar-fixed-top.teal1 {
+	background-color: @brand-teal-1;
+	border-color: @brand-teal-1;
+	.navbar-toggle, .navbar-toggle:link, a.navbar-toggle:visited {
+		border-color: @navlink;
+	}
+	.navbar-toggle:active, .navbar-toggle:hover {
+		border-color: @navlink;
+		background-color: @brand-teal-2;
+	}
+	.navbar-brand, .navbar-brand:link, .navbar-brand:visited {
+		color: fade(@navlink, 90%);
+		.lighten {
+			color: lighten(@brand-teal-1, 40%);
+		}
+		/* Small devices (tablets, 768px and up) */
+		@media (max-width: @screen-sm-min) { 
+			& {
+				font-size: 16px;
+			}
+		}
+	}
+	
+	.navbar-brand, .navbar-brand:active, .navbar-brand:hover {
+		color: fade(@navlink, 100%);
+		.lighten {
+			color: lighten(@brand-teal-1, 30%);
+		}
+	}
+	.nav.navbar-nav {
+		a, a:link, a:visited, .nav-links > li > a {
+			color: #cfe4e3;
+			color: fade(@navlink, 80%);
+		}
+		a, a:focus, a:hover, .nav-links > li > a {
+			color: fade(@navlink, 100%);
+		}
+	}
+
+}
+.docloud-sidebar {
+    margin-top: 194px;
+    padding-top: 30px;
+    padding-right: 15px;
+    color: #999;
+    padding-bottom: 20px;
+    background-color: #F5f5f5;
+}

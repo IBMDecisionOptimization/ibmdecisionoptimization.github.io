@@ -1,0 +1,27 @@
+{
+  "name": "IBMDecisionOptimization.github.io",
+  "version": "1.0.0",
+  "homepage": "https://ibmdecisionoptimization.github.io",
+  "authors": [
+    "Dominique BERTRAND <dbertrand@fr.ibm.com>"
+  ],
+  "description": "Githun catalogue of IBM Decision Optimization Repositories",
+  "main": "index.html",
+  "keywords": [
+    "js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.x",
+    "bootstrap": "3.3.x",
+    "angular-bootstrap": "~0.13.2",
+    "font-awesome": "~4.4.0"
+  }
+}

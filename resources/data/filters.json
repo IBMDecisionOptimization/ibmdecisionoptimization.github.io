@@ -1,0 +1,54 @@
+{
+   "categories":[
+      {
+         "name":"ADVANCED MODELING",
+         "selector":"categories[ADVANCED MODELING]",
+         "label":"Categories: ADVANCED MODELING"
+      },
+      {
+         "name":"DATA INTEGRATION",
+         "selector":"categories[DATA INTEGRATION]",
+         "label":"Categories: DATA INTEGRATION"
+      },
+      {
+         "name":"DESKTOP APPLICATION",
+         "selector":"categories[DESKTOP APPLICATION]",
+         "label":"Categories: DESKTOP APPLICATION"
+      },
+      {
+         "name":"MOBILE APPLICATION",
+         "selector":"categories[MOBILE APPLICATION]",
+         "label":"Categories: MOBILE APPLICATION"
+      },
+      {
+         "name":"MODEL",
+         "selector":"categories[MODEL]",
+         "label":"Categories: MODEL"
+      }
+   ],
+   "languages":[
+      {
+         "name":"Java",
+         "selector":"languages[Java]",
+         "label":"Languages: Java"
+      },
+      {
+         "name":"CPLEX",
+         "selector":"languages[CPLEX]",
+         "label":"Languages: CPLEX"
+      },
+      {
+         "name":"OPL CP",
+         "selector":"languages[OPL CP]",
+         "label":"Languages: OPL CP"
+      },
+      {
+         "name":"Python",
+         "selector":"languages[Python]",
+         "label":"Languages: Python"
+      }
+   ],
+   "industries":[
+
+   ]
+}

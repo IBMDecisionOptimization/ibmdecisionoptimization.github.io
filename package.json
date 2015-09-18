@@ -1,0 +1,17 @@
+{
+  "name":               "IBM-Bluemix.github.io",
+  "description":        "source for IBM-Bluemix.github.io",
+  "version":            "1.0.0",
+  "scripts": {
+    "cake":             "cake",
+    "watch":            "cake watch",
+    "build":            "cake build",
+    "bower":            "cake bower"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jquery":    "2.1.x",
+    "bootstrap":            "3.3x"
+  }
+}
