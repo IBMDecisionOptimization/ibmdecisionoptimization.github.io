@@ -17,5 +17,5 @@
 	"developments": ["Java"],
 	"industries": ["Transportation"],
 	"class" : "cat-green",
-	"models": [ "OPL cplex" ]
+	"models": [ "OPL CPLEX" ]
 }]
