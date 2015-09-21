@@ -93,10 +93,20 @@ function($scope,cardsFactory,filtersFactory) { // definition of the controller
 					}
 				}
 			}
-			// languages
+			// developments
 			for (i = 0; i < filteredCards.length; i++) {
 				for (j = 0; j < filteredCards[i].developments.length; j++) {
 					if (searchnameRegExp.test(filteredCards[i].developments[j])) {
+						if ($.inArray(filteredCards[i], result) == -1) {
+			        result.push(filteredCards[i]);
+						}
+					}
+				}
+			}
+			// models
+			for (i = 0; i < filteredCards.length; i++) {
+				for (j = 0; j < filteredCards[i].models.length; j++) {
+					if (searchnameRegExp.test(filteredCards[i].models[j])) {
 						if ($.inArray(filteredCards[i], result) == -1) {
 			        result.push(filteredCards[i]);
 						}
