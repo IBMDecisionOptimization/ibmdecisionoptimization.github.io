@@ -11,7 +11,7 @@
 },{
 	"author": "IBM",
 	"name": "DOcloud GreenTruck sample",
-	"description": "Web application showing how to solve simple transportation optimization problems. The applications demonstrates how to integrate the IBM DOcloud Java client with data stored in MongoDB and a web frontend developed with AngularJS.",
+	"description": "Web application showing how to solve simple transportation optimization problems. The application demonstrates how to integrate the IBM DOcloud Java client with data stored in MongoDB and a web frontend developed with AngularJS.",
 	"url": "//github.com/IBMDecisionOptimization/DOcloud-GreenTruck-sample",
 	"categories": [ "WEB APPLICATION" ],
 	"developments": ["Java"],
