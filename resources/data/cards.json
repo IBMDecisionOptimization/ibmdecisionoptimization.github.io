@@ -1,7 +1,7 @@
 [{
 	"author": "IBM",
 	"name": "DOcloud Python client samples",
-	"description": "Python client samples demonstrate how to use the Python client to submit a problem to the IBM Decision Optmization on Cloud service.",
+	"description": "The Python client samples demonstrate how to use the Python client to submit a problem to the IBM Decision Optmization on Cloud service.",
 	"url": "//github.com/IBMDecisionOptimization/DOcloud-Python-client-samples",
 	"categories": ["CLIENT"],
 	"developments": ["Python"],
@@ -11,11 +11,11 @@
 },{
 	"author": "IBM",
 	"name": "DOcloud GreenTruck sample",
-	"description": "Web application showing how to solve simple transportation optimization problems. The application demonstrates how to integrate the IBM DOcloud Java client with data stored in MongoDB and a web frontend developed with AngularJS.",
+	"description": "A web application showing how to solve a simple transportation optimization problem. The application demonstrates how to integrate the IBM DOcloud Java client with data stored in MongoDB and a web frontend developed with AngularJS.",
 	"url": "//github.com/IBMDecisionOptimization/DOcloud-GreenTruck-sample",
 	"categories": [ "WEB APPLICATION" ],
 	"developments": ["Java"],
 	"industries": ["Transportation"],
 	"class" : "cat-green",
-	"models": [ "OPL CPLEX" ]
+	"models": [ "OPL-CPLEX" ]
 }]
