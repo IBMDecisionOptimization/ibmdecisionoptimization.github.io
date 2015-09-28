@@ -1,7 +1,7 @@
 [{
 	"author": "IBM",
-	"name": "DOcloud Python client samples",
-	"description": "The Python client samples demonstrate how to use the Python client to submit a problem to the IBM Decision Optmization on Cloud service.",
+	"name": "DOcloud Python Client samples",
+	"description": "These samples demonstrate how to use the Python Client to submit a problem to the IBM Decision Optimization on Cloud service.",
 	"url": "//github.com/IBMDecisionOptimization/DOcloud-Python-client-samples",
 	"categories": ["CLIENT"],
 	"developments": ["Python"],
