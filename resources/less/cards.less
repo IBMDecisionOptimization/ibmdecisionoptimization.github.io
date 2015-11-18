@@ -6,8 +6,8 @@
 	    transition: transform 1s;
 	    display: none;
 	    max-width: 350px;
-			min-width: 270px;
-			min-height: 425px;
+        min-width: 270px;
+        // min-height: 425px;
 	}
     div.active-card {
 	    display: block;
@@ -33,8 +33,9 @@
 	    float: right;
 	    margin-top: -28px !important;
 	    margin-right: 14px !important;
-	    margin: 0;
-	    padding: 15px;
+		margin-left: 0;
+		margin-bottom: 0;
+		padding: 15px;
 	    font-size: 26px;
 	    width: 56px;
 	    height: 56px;
@@ -141,7 +142,14 @@
 			  opacity: .2;
 			}
 		}
-		
+	}
+	.rollover3 {
+		&:hover {
+            box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+            -webkit-transition: box-shadow .28s cubic-bezier(0.4,0,.2,1);
+            transition: box-shadow .28s cubic-bezier(0.4,0,.2,1);
+          cursor:pointer;
+        }
 	}
 	/* card */
 	.card {
@@ -187,9 +195,9 @@
 	.well {
 	    padding: 38px 19px 38px 19px;
 	    margin-bottom: 20px;
-	    box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
+	    // box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
 	    border-radius: 2px;
-	    border: 0;
+	    border: 1px solid rgb(230,230,230);
 	    background-color: #fff;
 	    .categories, .languages {
 		    display: block;
@@ -300,7 +308,7 @@
 			background-color: @blue;
 			background-color: fade(@blue, 100%);	
 			&:hover{
-				background-color: darken(@blue, 20%);
+				// background-color: darken(@blue, 20%);
 			}	
 		}
 		.btn-primary:not(.btn-link) {
@@ -382,6 +390,38 @@
 			color: @grey;
 		    
 	    }
+	}
+	.cat-default {
+		.rollover:hover, &:hover  {
+			.overlay {
+				a, a:link, a:visited {
+					color: rgba(255, 255, 255, 1);
+					background-color: @grey;
+				}
+			}
+			.card {
+				/* background-color: darken(@orange, 80%); */
+			}
+		}
+		.card {
+			background-color: @grey;
+			background-color: fade(@grey, 100%);
+		}
+		.btn-primary:not(.btn-link) {
+			background-color: #FFFFFF;
+			border: 2px solid @grey;
+			box-shadow: none;
+		}
+		.btn-fab, .btn-fab .ripple-wrapper {
+			color: @grey;
+		}
+		.category {
+			color: @grey;
+		}
+		.language {
+			color: @grey;
+
+		}
 	}
 	/* entire container, keeps perspective */
 	.flip-container {
@@ -490,8 +530,7 @@
 	    
 		/* Small devices (tablets, 768px and up) */
 		@media (max-width: @screen-sm-min) { 
-			.input-group {verre double vitrage sur mesure
-				
+			.input-group {
 			    text-align: center;
 			    margin-right: -23px;
 			}

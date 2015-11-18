@@ -176,6 +176,10 @@ function($scope,cardsFactory,filtersFactory) { // definition of the controller
          return $scope;   
     }
 
+	$scope.openUrl = function(url) {
+		window.open(url);
+	};
+
     cardsFactory.get().then(function (response) {
         $scope.cards = response.data;
         cards = $scope.cards;
