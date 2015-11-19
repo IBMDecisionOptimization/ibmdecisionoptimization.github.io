@@ -190,8 +190,14 @@
 			letter-spacing: .05em;
 			line-height: 1.4em;
 		}
+      *.fadeout {
+        position: absolute;
+        bottom: 0em;
+        width:100%;
+        height: 4em;
+      }
 
-	}	
+    }
 	/* well bottom */
 	.well {
 	    padding: 38px 19px 38px 19px;
@@ -228,33 +234,55 @@
 	}
 	/* category */
 	.cat-green {
+        @color: @green;
 		.rollover:hover, &:hover  {
 			.overlay {
 				a, a:link, a:visited {
 					color: rgba(255, 255, 255, 1);	
-					background-color: @green;
+					background-color: @color;
 					letter-spacing: .05em
 				}				
 			}
 			.card {
-				/* background-color: darken(@orange, 80%); */
 			}
 		}
 
 		.card {
-			background-color: @green;
-			background-color: fade(@green, 100%);	
+			background-color: @color;
+			background-color: fade(@color, 100%);
+            *.fadeout {
+              background: -webkit-linear-gradient(
+                      fade(@color, 0%) 0%,
+                      @color 100%
+              );
+              background-image: -moz-linear-gradient(
+                      fade(@color, 0%) 0%,
+                      @color 100%
+              );
+              background-image: -o-linear-gradient(
+                      fade(@color, 0%) 0%,
+                      @color 100%
+              );
+              background-image: linear-gradient(
+                      fade(@color, 0%) 0%,
+                      @color 100%
+              );
+              background-image: -ms-linear-gradient(
+                      fade(@color, 0%) 0%,
+                      @color 100%
+              );
+            }
 		}
 		.btn-primary:not(.btn-link) {
 		    background-color: #FFFFFF;
-		    border: 2px solid @green;
+		    border: 2px solid @color;
 			box-shadow: none;
 		}
 		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @green;
+			color: @color;
 		}
 	    .category {
-		    color: @green;
+		    color: @color;
 	    }
 	    .language {
 			color: @grey;
@@ -262,167 +290,285 @@
 	    }
 	}
 	.cat-orange {
-		.rollover:hover, &:hover  {
-			.overlay {
-				a, a:link, a:visited {
-					color: rgba(255, 255, 255, 1);	
-					background-color: @orange;
-				}				
-			}
-			.card {
-				/* background-color: darken(@orange, 80%); */
-			}
-		}
-		.card {
-			background-color: @orange;
-			background-color: fade(@orange, 100%);	
-		}
-		.btn-primary:not(.btn-link) {
-		    background-color: #FFFFFF;
-		    border: 2px solid @orange;
-			box-shadow: none;
-		}
-		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @orange;
-		}
-	    .category {
-		    color: @orange;
-	    }
-	    .language {
-			color: @grey;
-		    
-	    }
+      @color: @orange;
+      .rollover:hover, &:hover  {
+        .overlay {
+          a, a:link, a:visited {
+            color: rgba(255, 255, 255, 1);
+            background-color: @color;
+            letter-spacing: .05em
+          }
+        }
+        .card {
+        }
+      }
+
+      .card {
+        background-color: @color;
+        background-color: fade(@color, 100%);
+        *.fadeout {
+          background: -webkit-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -moz-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -o-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -ms-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+        }
+      }
+      .btn-primary:not(.btn-link) {
+        background-color: #FFFFFF;
+        border: 2px solid @color;
+        box-shadow: none;
+      }
+      .btn-fab, .btn-fab .ripple-wrapper {
+        color: @color;
+      }
+      .category {
+        color: @color;
+      }
+      .language {
+        color: @grey;
+
+      }
 	}
 	.cat-blue {
-		.rollover:hover, &:hover  {
-			.overlay {
-				a, a:link, a:visited {
-					color: rgba(255, 255, 255, 1);	
-					background-color: @blue;
-				}				
-			}
-			.card {
-				/* background-color: darken(@orange, 80%); */
-			}
-		}
-		.card {
-			background-color: @blue;
-			background-color: fade(@blue, 100%);	
-			&:hover{
-				// background-color: darken(@blue, 20%);
-			}	
-		}
-		.btn-primary:not(.btn-link) {
-		    background-color: #FFFFFF;
-		    border: 2px solid @blue;
-			box-shadow: none;
-		}
-		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @blue;
-		}
-	    .category {
-		    color: @blue;
-	    }
-	    .language {
-			color: @grey;
-		    
-	    }
+      @color: @blue;
+      .rollover:hover, &:hover  {
+        .overlay {
+          a, a:link, a:visited {
+            color: rgba(255, 255, 255, 1);
+            background-color: @color;
+            letter-spacing: .05em
+          }
+        }
+        .card {
+        }
+      }
+
+      .card {
+        background-color: @color;
+        background-color: fade(@color, 100%);
+        *.fadeout {
+          background: -webkit-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -moz-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -o-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -ms-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+        }
+      }
+      .btn-primary:not(.btn-link) {
+        background-color: #FFFFFF;
+        border: 2px solid @color;
+        box-shadow: none;
+      }
+      .btn-fab, .btn-fab .ripple-wrapper {
+        color: @color;
+      }
+      .category {
+        color: @color;
+      }
+      .language {
+        color: @grey;
+
+      }
 	}
 	.cat-red {
-		.rollover:hover, &:hover  {
-			.overlay {
-				a, a:link, a:visited {
-					color: rgba(255, 255, 255, 1);	
-					background-color: @brand-red-1;
-				}				
-			}
-			.card {
-				/* background-color: darken(@orange, 80%); */
-			}
-		}
-		.card {
-			background-color: @brand-red-1;
-			background-color: fade(@brand-red-1, 100%);	
-		}
-		.btn-primary:not(.btn-link) {
-		    background-color: #FFFFFF;
-		    border: 2px solid @brand-red-1;
-			box-shadow: none;
-		}
-		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @brand-red-1;
-		}
-	    .category {
-		    color: @brand-red-1;
-	    }
-	    .language {
-			color: @grey;
-		    
-	    }
+      @color: @brand-red-1;
+      .rollover:hover, &:hover  {
+        .overlay {
+          a, a:link, a:visited {
+            color: rgba(255, 255, 255, 1);
+            background-color: @color;
+            letter-spacing: .05em
+          }
+        }
+        .card {
+        }
+      }
+
+      .card {
+        background-color: @color;
+        background-color: fade(@color, 100%);
+        *.fadeout {
+          background: -webkit-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -moz-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -o-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -ms-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+        }
+      }
+      .btn-primary:not(.btn-link) {
+        background-color: #FFFFFF;
+        border: 2px solid @color;
+        box-shadow: none;
+      }
+      .btn-fab, .btn-fab .ripple-wrapper {
+        color: @color;
+      }
+      .category {
+        color: @color;
+      }
+      .language {
+        color: @grey;
+
+      }
 	}
 	.cat-purple {
-		.rollover:hover, &:hover {
-			.overlay {
-				a, a:link, a:visited {
-					color: rgba(255, 255, 255, 1);	
-					background-color: @brand-purple-1;
-				}				
-			}
-			.card {
-				/* background-color: darken(@orange, 80%); */
-			}
-		}
-		.card {
-			background-color: @brand-purple-1;
-			background-color: fade(@brand-purple-1, 100%);	
-		}
-		.btn-primary:not(.btn-link) {
-		    background-color: #FFFFFF;
-		    border: 2px solid @brand-purple-1;
-			box-shadow: none;
-		}
-		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @brand-purple-1;
-		}
-	    .category {
-		    color: @brand-purple-1;
-	    }
-	    .language {
-			color: @grey;
-		    
+      @color: @brand-purple-1;
+      .rollover:hover, &:hover  {
+        .overlay {
+          a, a:link, a:visited {
+            color: rgba(255, 255, 255, 1);
+            background-color: @color;
+            letter-spacing: .05em
+          }
+        }
+        .card {
+        }
+      }
+
+      .card {
+        background-color: @color;
+        background-color: fade(@color, 100%);
+        *.fadeout {
+          background: -webkit-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -moz-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -o-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -ms-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+        }
+      }
+      .btn-primary:not(.btn-link) {
+        background-color: #FFFFFF;
+        border: 2px solid @color;
+        box-shadow: none;
+      }
+      .btn-fab, .btn-fab .ripple-wrapper {
+        color: @color;
+      }
+      .category {
+        color: @color;
+      }
+      .language {
+        color: @grey;
+
+      }
 	    }
 	}
 	.cat-default {
-		.rollover:hover, &:hover  {
-			.overlay {
-				a, a:link, a:visited {
-					color: rgba(255, 255, 255, 1);
-					background-color: @grey;
-				}
-			}
-			.card {
-				/* background-color: darken(@orange, 80%); */
-			}
-		}
-		.card {
-			background-color: @grey;
-			background-color: fade(@grey, 100%);
-		}
-		.btn-primary:not(.btn-link) {
-			background-color: #FFFFFF;
-			border: 2px solid @grey;
-			box-shadow: none;
-		}
-		.btn-fab, .btn-fab .ripple-wrapper {
-			color: @grey;
-		}
-		.category {
-			color: @grey;
-		}
-		.language {
-			color: @grey;
+      @color: @grey;
+      .rollover:hover, &:hover  {
+        .overlay {
+          a, a:link, a:visited {
+            color: rgba(255, 255, 255, 1);
+            background-color: @color;
+            letter-spacing: .05em
+          }
+        }
+        .card {
+        }
+      }
 
-		}
+      .card {
+        background-color: @color;
+        background-color: fade(@color, 100%);
+        *.fadeout {
+          background: -webkit-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -moz-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -o-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+          background-image: -ms-linear-gradient(
+                  fade(@color, 0%) 0%,
+                  @color 100%
+          );
+        }
+      }
+      .btn-primary:not(.btn-link) {
+        background-color: #FFFFFF;
+        border: 2px solid @color;
+        box-shadow: none;
+      }
+      .btn-fab, .btn-fab .ripple-wrapper {
+        color: @color;
+      }
+      .category {
+        color: @color;
+      }
+      .language {
+        color: @grey;
+
+      }
 	}
 	/* entire container, keeps perspective */
 	.flip-container {
