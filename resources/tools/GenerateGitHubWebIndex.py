@@ -26,10 +26,16 @@ except ImportError:
 
 def createIndexForWeb(_input, _output):
     #read name and desc info from api.github.com
+    # Github.com
     # api_url = "https://api.github.com/orgs/IBMDecisionOptimization/repos?per_page=1000"
+    # GitHub.ibm.com
+    # api_url = 'https://api.github.ibm.com/orgs/IBMDecisionOptimization/repos?per_page=1000'
     api_url = input
     cards=[]
+    # GitHub.com
     raw_info_json_url = 'https://raw.githubusercontent.com/IBMDecisionOptimization/repos_name/master/info.json'
+    # GitHib.ibm.com
+    # raw_info_json_url = 'https://raw.github.ibm.com/IBMDecisionOptimization/repos_name/master/info.json'
     api_json_data = json.loads(urllib.request.urlopen(_input).read().decode('utf-8'))
     index_for_web = open(_output,'w')
 
