@@ -183,10 +183,10 @@
 
 			<!--  Cards Data Row -->
 			<div class="row" ng-show="tab === 1">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 full-card preload" ng-repeat="card in cards" ng-class="{visible:cards.length>=1}">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 full-card preload" ng-repeat="card in cards" ng-class="{visible:cards.length>=1,full: hover}">
 					<div class="rollover3 docloud-card active-card" ng-class="card.class" ng-href="" ng-click='openUrl( card.url )'>
 
-						<div class="card">
+						<div class="card" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
 							<span class='author' ng-bind="card.author"></span>
 							<h6 ng-bind="card.name"></h6>
 							<p class="description" ng-bind="card.description"></p>
