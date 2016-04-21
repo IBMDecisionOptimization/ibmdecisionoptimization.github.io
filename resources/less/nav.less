@@ -1,6 +1,12 @@
 nav.navbar.navbar-inverse.navbar-fixed-top.teal1 {
 	background-color: @brand-teal-1;
 	border-color: @brand-teal-1;
+    margin-bottom: 0;
+	@media (max-width: @screen-sm-min) {
+		& {
+			font-size: 16px;
+		}
+	}
 	.navbar-toggle, .navbar-toggle:link, a.navbar-toggle:visited {
 		border-color: @navlink;
 	}
@@ -10,14 +16,19 @@ nav.navbar.navbar-inverse.navbar-fixed-top.teal1 {
 	}
 	.navbar-brand, .navbar-brand:link, .navbar-brand:visited {
 		color: fade(@navlink, 90%);
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			& {
+				font-size: 14px;
+				background-color: rgba(0,0,0,.1);
+			}
+		}
+		@media (max-width: @screen-xs-max) {
+			& {
+				font-size: 12px;
+			}
+		}
 		.lighten {
 			color: lighten(@brand-teal-1, 40%);
-		}
-		/* Small devices (tablets, 768px and up) */
-		@media (max-width: @screen-sm-min) { 
-			& {
-				font-size: 16px;
-			}
 		}
 	}
 	
@@ -31,18 +42,39 @@ nav.navbar.navbar-inverse.navbar-fixed-top.teal1 {
 		a, a:link, a:visited, .nav-links > li > a {
 			color: #cfe4e3;
 			color: fade(@navlink, 80%);
+			.darker {
+				color: @color-white;
+			}
 		}
 		a, a:focus, a:hover, .nav-links > li > a {
 			color: fade(@navlink, 100%);
+		}
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			& {
+				margin-left: 8px;
+				font-size: 12px;
+				margin-right: -10px;
+			}
+			& > li > a {
+				padding: 15px 8px;
+			}
 		}
 	}
 
 }
 .docloud-sidebar {
-    margin-top: 194px;
-    padding-top: 30px;
-    padding-right: 15px;
-    color: #666;
-    padding-bottom: 20px;
-    background-color: #F5f5f5;
+	margin-top: 194px;
+	padding-top: 30px;
+	padding-right: 15px;
+	color: #666;
+	padding-bottom: 20px;
+	background-color: #F5f5f5;
+	.sidebar-nav {
+		position: absolute;
+		top: 0;
+		width: 250px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 }

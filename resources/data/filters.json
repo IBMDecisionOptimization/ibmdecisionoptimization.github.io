@@ -1,51 +1,58 @@
 {
    "categories":[
       {
-         "name":"ADVANCED MODELING",
-         "selector":"categories[ADVANCED MODELING]",
-         "label":"Categories: ADVANCED MODELING"
+         "name":"APPLICATION",
+         "selector":"categories[APPLICATION]",
+         "label":"APPLICATION"
       },
       {
-         "name":"DATA INTEGRATION",
-         "selector":"categories[DATA INTEGRATION]",
-         "label":"Categories: DATA INTEGRATION"
+         "name":"CLIENT",
+         "selector":"categories[CLIENT]",
+         "label":"CLIENT"
       },
       {
-         "name":"DESKTOP APPLICATION",
-         "selector":"categories[DESKTOP APPLICATION]",
-         "label":"Categories: DESKTOP APPLICATION"
-      },
-      {
-         "name":"MOBILE APPLICATION",
-         "selector":"categories[MOBILE APPLICATION]",
-         "label":"Categories: MOBILE APPLICATION"
-      },
-      {
-         "name":"MODEL",
-         "selector":"categories[MODEL]",
-         "label":"Categories: MODEL"
+         "name":"MODELING",
+         "selector":"categories[MODELING]",
+         "label":"MODELING"
       }
    ],
-   "languages":[
+   "developments":[
       {
          "name":"Java",
-         "selector":"languages[Java]",
-         "label":"Languages: Java"
-      },
-      {
-         "name":"CPLEX",
-         "selector":"languages[CPLEX]",
-         "label":"Languages: CPLEX"
-      },
-      {
-         "name":"OPL CP",
-         "selector":"languages[OPL CP]",
-         "label":"Languages: OPL CP"
+         "selector":"developments[Java]",
+         "label":"Java"
       },
       {
          "name":"Python",
-         "selector":"languages[Python]",
-         "label":"Languages: Python"
+         "selector":"developments[Python]",
+         "label":"Python"
+      },
+      {
+         "name":"VBA",
+         "selector":"developments[VBA]",
+         "label":"VBA"
+      },
+      {
+         "name":"Excel",
+         "selector":"developments[Excel]",
+         "label":"Excel"
+      }
+   ],
+   "models":[
+      {
+         "name":"CPLEX",
+         "selector":"models[CPLEX]",
+         "label":"CPLEX"
+      },
+      {
+         "name":"OPL CPLEX",
+         "selector":"models[OPL-CPLEX]",
+         "label":"OPL-CPLEX"
+      },
+      {
+         "name":"CPO",
+         "selector":"models[CPO]",
+         "label":"CPO"
       }
    ],
    "industries":[

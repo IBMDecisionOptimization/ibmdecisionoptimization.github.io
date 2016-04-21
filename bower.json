@@ -19,9 +19,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "2.1.x",
-    "bootstrap": "3.3.x",
-    "angular-bootstrap": "~0.13.2",
-    "font-awesome": "~4.4.0"
+    "jquery": "2.x",
+    "angular-bootstrap": "~1",
+    "font-awesome": "~4",
+    "bootstrap": "~3"
   }
 }

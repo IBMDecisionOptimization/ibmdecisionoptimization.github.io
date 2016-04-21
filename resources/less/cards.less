@@ -2,9 +2,17 @@
   position: relative;
   transition: all 1.2s;
   font-family: @mainfont;
+  height: 370px;
+  margin-bottom: 15px;
+  @media (min-width: 1800px) {
+    &.col-xl-2 {
+      width: 16.66666667%;
+    }
+  }
+
   &.full {
     .rollover3 {
-      height: 388px;
+      height: 370px;
       border-radius: 3px 3px 0 0;
       &:hover {
         box-shadow: none !important;
@@ -36,9 +44,10 @@
   div.docloud-card {
     transition: transform 1s;
     display: none;
-    max-width: 350px;
-    min-width: 270px;
+    max-width: 300px;
+    min-width: 150px;
     // min-height: 425px;
+    margin: auto;
   }
   div.active-card {
     display: block;
@@ -214,7 +223,7 @@
     }
     .description {
       color: white;
-      font-size: .9em;
+      font-size: 1em;
       text-align: left;
       padding: 0px 10px 0px 20px;
       font-family: @alternatefont;
@@ -337,74 +346,7 @@
     .cat-mixins(@grey);
   }
 }
-/* entire container, keeps perspective */
-.controlsBar {
-  margin-bottom: 35px;
-  margin-top: -20px !important;
-  .filterby { display: none;}
-  .nav-pills>li.view-selector {
-    &.active>a {
-      color: #666;
-      background-color: transparent;
-      border: 1px solid #AAA;
-    }
-    &.active>a:focus, &.active>a:hover {
 
-    }
-    &>a {
-      color: #666;
-
-    }
-  }
-  .docloud-search-input {
-    margin:0;
-    margin-top: 10px;
-    padding: 0;
-
-
-    .search-query {
-      padding-right: 4px;
-      padding-right: 5px \9;
-      padding-left: 4px;
-      padding-left: 5px \9;
-      /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
-      margin-bottom: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-    }
-
-    button {
-      border: 0;
-      background: none;
-      /** belows styles are working good */
-      padding: 2px 5px;
-      margin-top: 2px;
-      position: relative;
-      left: -28px;
-      /* IE7-8 doesn't have border-radius, so don't indent the padding */
-      margin-bottom: 0;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      border-radius: 3px;
-      color:rgba(0, 0, 0, 0.5);
-    }
-
-    .search-query:focus + button {
-      z-index: 3;
-    }
-
-    /* Small devices (tablets, 768px and up) */
-    @media (max-width: @screen-sm-min) {
-      .input-group {
-        text-align: center;
-        margin-right: -23px;
-      }
-    }
-  }
-
-}
 .cardsTable {
   padding: 0 15px;
   table {

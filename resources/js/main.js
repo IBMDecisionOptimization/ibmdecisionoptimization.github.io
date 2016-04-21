@@ -1,4 +1,3 @@
-console.log('This would be the main JS file.');
 angular.module('com.ibm.optim.oaas.github.catalog', ['ui.bootstrap']);
 angular.module('com.ibm.optim.oaas.github.catalog').controller('AccordionCtrl', function ($scope) {
   $scope.oneAtATime = true;

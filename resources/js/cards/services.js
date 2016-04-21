@@ -1,4 +1,3 @@
-console.log('This would be the services JS file.');
 docloudApp.factory('cardsFactory', function ($http) {
     return {
         get: function () {

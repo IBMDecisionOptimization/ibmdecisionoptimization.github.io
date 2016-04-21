@@ -1,0 +1,183 @@
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  &.toggled {
+    padding-left: 250px;
+    #sidebar-wrapper {
+      width: 250px;
+    }
+    #page-content-wrapper {
+       position: absolute;
+       margin-right: -250px;
+    }
+
+  }
+  /* Wrapper */
+  #page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+  }
+  #sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: @color-primary;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .logo {
+    display: block;
+    text-indent: -9999px;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    background-size: 240px 50px;
+    padding: 0;
+    margin: 0;
+  }
+  /* Sidebar Styles */
+  .sidebar-nav {
+    display: none;
+    position: absolute;
+//    top: 100px;
+    top: 10px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      text-indent: 20px;
+      line-height: 40px;
+      &.divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: @color-medium;
+      }
+      &.collapsible-menu {
+        a.dropdown-toggle {
+          color: @color-medium;
+          position: relative;
+          span.glyphicon {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+          }
+        }
+        ul {
+          padding-left: 10px;
+        }
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: @color-light-tertiary;
+        margin-bottom: 1px;
+        &:hover {
+          text-decoration: none;
+          color: @color-white;
+          background: rgba(255,255,255,0.2);
+        }
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+        &.right {
+          text-align: right;
+          padding-right: 18px;
+        }
+      }
+
+      &.APPLICATION a {
+        background: linear-gradient(90deg, @green 0%, @green 5%, transparent 5%, transparent 100%);
+        &:hover {
+          background: linear-gradient(90deg, @green 0%, @green 5%, rgba(255,255,255,0.2) 5%, rgba(255,255,255,0.2) 100%);
+        }
+      }
+      &.CLIENT a {
+        background: linear-gradient(90deg, @blue 0%, @blue 5%, transparent 5%, transparent 100%);
+        &:hover {
+          background: linear-gradient(90deg, @blue 0%, @blue 5%, rgba(255,255,255,0.2) 5%, rgba(255,255,255,0.2) 100%);
+        }
+      }
+      &.MODELING a {
+        background: linear-gradient(90deg, @brand-purple-1 0%, @brand-purple-1 5%, transparent 5%, transparent 100%);
+        &:hover {
+          background: linear-gradient(90deg, @brand-purple-1 0%, @brand-purple-1 5%, rgba(255,255,255,0.2) 5%, rgba(255,255,255,0.2) 100%);
+        }
+      }
+
+      &.active {
+        a {
+          text-decoration: none;
+          color: @color-white;
+          background: rgba(255,255,255,0.2);
+          &.right {
+            background-color: transparent;
+          }
+        }
+        &.APPLICATION a {
+          background: @green;
+          color: @color-white;
+        }
+        &.CLIENT a {
+          background: @blue;
+        }
+        &.MODELING a {
+          background: @brand-purple-1;
+        }
+      }
+    }
+    & > .sidebar-brand {
+      height: 65px;
+      font-size: 18px;
+      line-height: 60px;
+      a {
+        color: @color-light-tertiary;
+        &:hover {
+          color: #fff;
+          background: none;
+        }
+      }
+    }
+  }
+
+  @media(min-width:768px) {
+    padding-left: 250px;
+    &.toggled {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      width: 250px;
+    }
+
+    &.toggled #sidebar-wrapper {
+      width: 0;
+    }
+
+    #page-content-wrapper {
+      padding: 20px;
+      position: relative;
+    }
+
+    &.toggled #page-content-wrapper {
+      position: relative;
+      margin-right: 0;
+    }
+  }
+}
+
+
