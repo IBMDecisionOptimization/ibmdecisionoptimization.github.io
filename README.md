@@ -6,8 +6,8 @@ The site is currently built based on the files:
 * `index.html`
 
 ## Development
-### Less theme files:
-Less theme files can be modified. To publih css files, Less files must be compiled by this following command:
+### Site Theme:
+The site theme is based on Less files. After modification, Less files should be compiled by this following command:
 <pre>
 # /usr/local/bin/lessc "--clean-css=--compatibility=ie8 --advanced" main.less ../css/main.min.css
 </pre>
