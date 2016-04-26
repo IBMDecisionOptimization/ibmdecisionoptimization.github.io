@@ -1,4 +1,4 @@
-Portal for IBM Decision Optimization on Cloud (DOcloud) open source at GitHub https://ibmdecisionoptimization.github.io
+Portal for IBM Decision Optimization on Cloud (DOcplexcloud) open source at GitHub https://ibmdecisionoptimization.github.io
 
 The site is currently built based on the files:
 
