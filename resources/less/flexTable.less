@@ -1,0 +1,245 @@
+/*
+ * Define the widths: play around with these
+ * to get a best fit.
+ */
+@name-width: 250px;
+@description-width: 600px;
+@category-width: 120px;
+@development-width: 120px;
+@model-width: 120px;
+@author-width: 70px;
+
+@margin-width: 30px;
+
+/*
+ * Basic styles, good for a large display. Everything fits in
+ * one row, no wrapping. All text based cells grow equally.
+ */
+// Main container - row container
+.cardsTable {
+  /*
+   * General good-look styles
+   */
+  .table-row {
+    border-bottom: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    padding-top: 2px;
+    &.header {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      color: #aaa;
+      font-size: 16px;
+      font-weight: 200;
+    }
+  }
+  .table-row {
+    display: flex;          display: -webkit-flex;
+    flex-direction: row;    -webkit-flex-direction: row;
+    flex-wrap: nowrap;     -webkit-flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  // Wrappers around cells and other wrappers
+  .wrapper {
+    display: flex; display: -webkit-flex;
+    flex-direction: row; -webkit-flex-direction: row;
+  }
+
+  // leaf level containers (cells): common properties
+  .column {
+    flex-grow: 0; -webkit-flex-grow: 0;
+    flex-shrink: 0; -webkit-flex-shrink: 0;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom:5px;
+  }
+
+  // leaf level containers: widths
+  .name { width: @name-width; }
+  .description { width: @description-width; }
+  .category { width: @category-width; }
+  .development { width: @development-width; }
+  .model { width: @model-width; }
+  .author { width: @author-width; }
+
+  // leaf level containers (cells): special properties
+
+  .body {
+    .name {
+      font-weight: bold;
+      color: #337AB5;
+    }
+    .author {
+      font-weight: lighter;
+      color: #AAA;
+    }
+  }
+
+  // these are growable text containers, with ellipsis to show truncated text
+  .name, .description {
+    flex-grow: 1; -webkit-flex-grow: 1;
+    overflow: hidden;
+    //  white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 4px;
+  }
+
+  /* growable wrappers */
+  .name-description, .attributes {
+    flex-grow: 1; -webkit-flex-grow: 1;
+  }
+
+  /*
+   * Media queries: optimize for different screen widths.
+   */
+
+  // Wrapper widths
+  @name-description-width: max(@name-width, @description-width);
+  @category-development-model-width: max(@category-width, @development-width, @model-width);
+  @attributes-width: max(@category-width, @development-width, @model-width, @author-width);
+  @all-attributes-width: max(@name-width, @description-width, @attributes-width);
+
+  .horizontal() {
+    flex-direction: row;        -webkit-flex-direction: row;
+  }
+
+  .vertical() {
+    // Let the wrapper flex vertically, so we get 2 rows
+    flex-direction: column;     -webkit-flex-direction: column;
+    // can't have the children grow, since this now means vertical growth
+    div {
+      flex-grow: 0;  -webkit-flex-grow: 0;
+    }
+  }
+
+  .vertical-growing() {
+    .vertical();
+    > div {
+      // Let immediate child divs grow horizontally, 100% to fill the wrapper
+      width: 100%;
+    }
+  }
+
+  /*
+   * Media breaks.
+   */
+
+  // First break
+  @media all and (max-width: (@margin-width * 2
+  + @name-width + @description-width
+  + @category-width + @development-width + @model-width
+  + @author-width )) {
+
+    .name-description {
+      .vertical-growing();
+      width: @name-description-width;
+    }
+    .category-development-model {
+      .vertical-growing();
+      width: @category-development-model-width;
+    }
+    .author {
+      .vertical-growing();
+      width: @author-width;
+    }
+    .table-row.header {
+      font-size: 14px;
+    }
+  }
+
+  // Next
+  @media all and (max-width: (@margin-width * 2 + @name-description-width + @attributes-width) ) {
+
+    .name-description {
+      .vertical();
+    }
+    .attributes {
+      .vertical-growing();
+      width: @attributes-width;
+    }
+    .table-row.header {
+      font-size: 14px;
+      .attributes {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // Last break
+  @media all and (max-width: (@margin-width * 2 + @all-attributes-width) ) {
+
+    // looks better with a little padding on mobile devices
+    .table-row {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    .table-row.header {
+      display: none;
+    }
+  }
+
+  .glyphicon {
+    color: #DDDDDD;
+  }
+
+  .header .glyphicon {
+    color: #333
+  }
+
+  .glyphicon-eye-open.active {
+    color: blue;
+  }
+
+  .glyphicon-comment.active {
+    color: #3EBB0D;
+  }
+
+  .glyphicon:hover {
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .reporter {
+    color: #999999;
+  }
+  .comment {
+    font-style: italic;
+  }
+
+  .severity.high { color: red; }
+  .severity.medium { color: blue; }
+  .severity.low { color: green; }
+
+  /* category */
+  .cat-mixins (@color) {
+    &.label {
+      background-color: @color;
+      background-color: fade(@color, 90%);
+      color: rgba(255, 255, 255, 1);
+      &:hover {
+        background-color: fade(@color, 100%);
+      }
+    }
+  }
+  .cat-green {
+    .cat-mixins(@green);
+  }
+  .cat-orange {
+    .cat-mixins(@orange);
+  }
+  .cat-blue {
+    .cat-mixins(@blue);
+  }
+  .cat-red {
+    .cat-mixins(@brand-red-1);
+  }
+  .cat-purple {
+    .cat-mixins(@brand-purple-1);
+  }
+  .cat-default {
+    .cat-mixins(@grey);
+  }
+}

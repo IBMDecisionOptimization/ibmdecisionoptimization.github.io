@@ -120,8 +120,8 @@
 		</div><!-- /.row -->
 		<!-- /.Page Header -->
 
-		<!-- Cards container -->
-		<div>
+		<!-- Cards wrapper -->
+		<div class="cards-wrapper">
 			<!-- Cards Controllers Row -->
 			<div class="row controlsBar">
 				<div class="col-xs-12 col-sm-6 col-md-6 flex">
@@ -229,46 +229,42 @@
 			</div><!-- /.row -->
 			<!-- / Cards Data Row -->
 
-			<!-- / Table Data Row -->
+			<!-- Table Data Row -->
 			<div class="row" ng-show="tab === 2">
-				<div class="table-responsive preload cardsTable" ng-class="{visible:cards.length>=1}">
-					<table class="table table-striped">
+				<div class="preload cardsTable" ng-class="{visible:cards.length>=1}">
 
-						<thead>
-						<tr>
-							<th>
-								Name
-							</th>
-							<th>
-								Description
-							</th>
-							<th>
-								Category
-							</th>
-							<th>
-								Development
-							</th>
-							<th>
-								Model
-							</th>
-							<th>
-								Author
-							</th>
-						</tr>
-						</thead>
+					<div class="container-fluid" style="margin-top: 10px">
+						<div class="table-row header">
+							<div class="wrapper name-description">
+								<div class="column name">Name</div>
+								<div class="column description">Description</div>
+							</div>
+							<div class="wrapper attributes">
+                                <div class="wrapper category-development-model">
+                                    <div class="column category">Category</div>
+                                    <div class="column development">Development</div>
+                                    <div class="column model">Model</div>
+                                </div>
+                                <div class="column author">Author</div>
+							</div>
+						</div>
 
-						<tbody>
-						<tr  ng-repeat="card in cards">
-							<td><a href="{{ card.url }}" target='_blank'>{{ card.name }}</a></td>
-							<td>{{ card.description }}</td>
-							<td><span class="category" ng-repeat="category in card.categories" ng-bind="category" ng-class="{'':'hidden'}[category]"></span></td>
-							<td><span class="category" ng-repeat="development in card.developments" ng-bind="development" ng-class="{'':'hidden'}[development]"></span></td>
-							<td><span class="category" ng-repeat="model in card.models" ng-bind="model" ng-class="{'':'hidden'}[model]"></span></td>
-							<td>{{ card.author }}</td>
-						</tr>
-						</tbody>
+						<div class="table-row body" ng-repeat="card in cards">
+							<div class="wrapper name-description">
+								<div class="column name"><a href="{{ card.url }}" target='_blank'>{{ card.name }}</a></div>
+								<div class="column description">{{ card.description }}</div>
+							</div>
+							<div class="wrapper attributes">
+                                <div class="wrapper category-development-model">
+                                    <div class="column category"><span class="label" ng-repeat="category in card.categories" ng-bind="category" ng-class="card.class"></span></div>
+                                    <div class="column development"><span class="category" ng-repeat="development in card.developments" ng-bind="development" ng-class="{development:'hidden'}[development]"></span></div>
+                                    <div class="column model"><span class="category" ng-repeat="model in card.models" ng-bind="model" ng-class="{model:'hidden'}[model]"></span></div>
+                                </div>
+                                <div class="column author">{{ card.author }}</div>
+							</div>
+						</div>
+					</div>
 
-					</table>
 				</div>
 			</div><!-- /.row -->
 			<!-- / Table Data Row -->
