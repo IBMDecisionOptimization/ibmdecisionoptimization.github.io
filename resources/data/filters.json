@@ -14,6 +14,11 @@
          "name":"MODELING",
          "selector":"categories[MODELING]",
          "label":"MODELING"
+      },
+      {
+         "name":"DOforDSX",
+         "selector":"categories[DOforDSX]",
+         "label":"DOforDSX"
       }
    ],
    "developments":[
