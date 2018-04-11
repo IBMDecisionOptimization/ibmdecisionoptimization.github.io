@@ -56,6 +56,11 @@
          "name":"R",
          "selector":"developments[R]",
          "label":"R"
+      },
+      {
+         "name":"Modeling Assistant",
+         "selector":"developments[Modeling Assistant]",
+         "label":"Modeling Assistant"
       }
    ],
    "models":[
