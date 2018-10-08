@@ -16,9 +16,9 @@
          "label":"MODELING"
       },
       {
-         "name":"DOforDSX",
-         "selector":"categories[DOforDSX]",
-         "label":"DOforDSX"
+         "name":"DOforWS",
+         "selector":"categories[DOforWS]",
+         "label":"DOforWS"
       }
    ],
    "developments":[
